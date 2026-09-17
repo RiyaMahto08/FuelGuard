@@ -49,13 +49,13 @@ export function TabButton({ children, isFocused, ...props }: TabTriggerSlotProps
 
 export function CustomTabList(props: TabListProps) {
   const scheme = useColorScheme();
-  const colors = Colors[scheme === 'unspecified' ? 'light' : scheme];
+  const colors = scheme === 'dark' ? Colors.dark : Colors.light;
 
   return (
     <View {...props} style={styles.tabListContainer}>
       <ThemedView type="backgroundElement" style={styles.innerContainer}>
         <ThemedText type="smallBold" style={styles.brandText}>
-          Expo Starter
+          Fuel Guard
         </ThemedText>
 
         {props.children}

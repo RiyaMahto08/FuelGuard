@@ -1,18 +1,66 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, Platform } from 'react-native';
+import { Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AppProvider } from '@/context/AppContext';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
-
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <AppProvider>
+        <StatusBar style="light" />
+        <View style={styles.outerContainer}>
+          <View style={styles.mobileAppContainer}>
+            <Stack
+              screenOptions={{
+                headerShown: false,
+                contentStyle: { backgroundColor: '#F8FAFC' },
+                animation: 'slide_from_right',
+              }}
+            >
+              <Stack.Screen name="index" options={{ headerShown: false }} />
+              <Stack.Screen name="login" options={{ headerShown: false }} />
+              <Stack.Screen name="dashboard" options={{ headerShown: false }} />
+              <Stack.Screen name="fuel-monitoring" options={{ headerShown: false }} />
+              <Stack.Screen name="register-equipment" options={{ headerShown: false }} />
+              <Stack.Screen name="application-form" options={{ headerShown: false }} />
+              <Stack.Screen name="application-status" options={{ headerShown: false }} />
+              <Stack.Screen name="verification-details" options={{ headerShown: false }} />
+              <Stack.Screen name="certificate" options={{ headerShown: false }} />
+              <Stack.Screen name="profile" options={{ headerShown: false }} />
+            </Stack>
+          </View>
+        </View>
+      </AppProvider>
+    </SafeAreaProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  outerContainer: {
+    flex: 1,
+    backgroundColor: '#0B192C',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    width: '100%',
+    minHeight: Platform.OS === 'web' ? ('100vh' as any) : '100%',
+  },
+  mobileAppContainer: {
+    width: '100%',
+    maxWidth: 480,
+    flex: 1,
+    minHeight: Platform.OS === 'web' ? ('100vh' as any) : '100%',
+    backgroundColor: '#F8FAFC',
+    overflow: 'hidden',
+    // Premium device frame shadows and border on desktop web
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.5,
+    shadowRadius: 30,
+    elevation: 16,
+    borderLeftWidth: Platform.OS === 'web' ? 1 : 0,
+    borderRightWidth: Platform.OS === 'web' ? 1 : 0,
+    borderColor: 'rgba(255, 255, 255, 0.1)',
+  },
+});
