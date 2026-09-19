@@ -1,56 +1,109 @@
-# Welcome to your Expo app 👋
+# ⛽ Fuel Guard
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### Smart Fuel Verification & Compliance Management Platform
 
-## Get started
+> **Prototype developed for Smart India Hackathon (SIH) 206**
 
-1. Install dependencies
+Fuel Guard is a software-based platform designed to support **fuel quantity monitoring, fuel quality verification, equipment verification, compliance workflows, and digital certification** through a unified application.
 
-   ```bash
-   npm install
-   ```
+The prototype demonstrates how fuel-related verification and compliance processes can be digitized to improve transparency, traceability, and ease of monitoring.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Live Demo
 
-In the output, you'll find options to open the app in a
+🌐 **Web App:**  
+https://fuel-guard-jxbte21b7-riyamahto2006-7719.vercel.app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+📂 **GitHub Repository:**  
+https://github.com/RiyaMahto08/FuelGuard
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 📌 About the Prototype
 
-When you're ready, run:
+Fuel Guard is developed as a **prototype for Smart India Hackathon (SIH 206)**.
 
-```bash
-npm run reset-project
-```
+The application focuses on creating a digital workflow for:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Fuel quantity monitoring
+- Fuel quality verification
+- Equipment verification
+- Verification applications
+- Application status tracking
+- Digital certificates
+- Compliance and verification records
 
-### Other setup steps
+The current version is a **demonstration prototype** using simulated/mock data to showcase the proposed application workflow and user experience.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+---
 
-## Learn more
+## 🎯 Key Objectives
 
-To learn more about developing your project with Expo, look at the following resources:
+- Digitize fuel verification and compliance workflows
+- Provide a centralized platform for monitoring fuel operations
+- Improve visibility of fuel quantity and quality information
+- Maintain digital verification records
+- Enable application and verification status tracking
+- Provide digital certification and verification records
+- Reduce dependency on manual documentation and fragmented processes
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## ✨ Key Features
 
-Join our community of developers creating universal apps.
+### ⛽ Fuel Monitoring
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Monitor fuel quantity and related fuel information through a centralized dashboard.
+
+- Current fuel quantity
+- Tank capacity
+- Fuel level
+- Fuel type
+- Fuel quality score
+- Monitoring information
+
+### 🧪 Fuel Quality Verification
+
+The prototype provides a dedicated interface for displaying fuel quality information and verification results.
+
+Example parameters demonstrated in the prototype include:
+
+- Fuel quality score
+- Density
+- Water content
+- Purity/compliance indicators
+
+> **Note:** These values are simulated prototype data and do not represent live sensor measurements.
+
+### 🔍 Equipment Verification
+
+Maintain digital records of fuel-related equipment and verification status.
+
+The prototype demonstrates:
+
+- Equipment registration
+- Equipment identification
+- Fuel type
+- Capacity
+- Installation information
+- Verification status
+- Verification dates
+- QR/reference identifiers
+
+### 📝 Verification Application
+
+Users can submit and track verification applications through the digital workflow.
+
+Example workflow:
+
+```text
+Registration
+     ↓
+Verification Application
+     ↓
+Verification Process
+     ↓
+Status Tracking
+     ↓
+Digital Certificate
