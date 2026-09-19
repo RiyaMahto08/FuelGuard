@@ -85,6 +85,7 @@ export default function RegisterEquipmentScreen() {
       />
 
       <ScrollView
+        style={{ flex: 1 }}
         contentContainerStyle={styles.scrollContainer}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
@@ -283,12 +284,14 @@ export default function RegisterEquipmentScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    height: '100%',
     backgroundColor: '#F8FAFC',
+    overflow: 'hidden',
   },
   scrollContainer: {
     paddingHorizontal: Spacing.lg,
     paddingTop: Spacing.md,
-    paddingBottom: 40,
+    paddingBottom: 90,
   },
   topActionRow: {
     alignItems: 'flex-end',

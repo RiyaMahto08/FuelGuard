@@ -15,7 +15,7 @@ export default function RootLayout() {
             <Stack
               screenOptions={{
                 headerShown: false,
-                contentStyle: { backgroundColor: '#F8FAFC' },
+                contentStyle: { backgroundColor: '#F8FAFC', flex: 1, height: '100%' },
                 animation: 'slide_from_right',
               }}
             >
@@ -44,15 +44,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     width: '100%',
-    minHeight: Platform.OS === 'web' ? ('100vh' as any) : '100%',
+    height: Platform.OS === 'web' ? ('100dvh' as any) : '100%',
+    maxHeight: Platform.OS === 'web' ? ('100dvh' as any) : '100%',
+    overflow: 'hidden',
   },
   mobileAppContainer: {
     width: '100%',
     maxWidth: 480,
     flex: 1,
-    minHeight: Platform.OS === 'web' ? ('100vh' as any) : '100%',
+    height: Platform.OS === 'web' ? ('100dvh' as any) : '100%',
+    maxHeight: Platform.OS === 'web' ? ('100dvh' as any) : '100%',
     backgroundColor: '#F8FAFC',
     overflow: 'hidden',
+    position: 'relative',
     // Premium device frame shadows and border on desktop web
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 10 },

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Modal, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Modal, Alert, Platform } from 'react-native';
 import { useRouter, usePathname } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors, Spacing, BorderRadius, Shadows } from '@/constants/theme';
@@ -522,10 +522,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1,
     borderTopColor: Colors.border,
-    paddingVertical: 8,
+    paddingTop: 8,
+    paddingBottom:
+      Platform.OS === 'web'
+        ? ('max(8px, env(safe-area-inset-bottom, 8px))' as any)
+        : 10,
     paddingHorizontal: 4,
     justifyContent: 'space-around',
     alignItems: 'center',
+    width: '100%',
+    flexShrink: 0,
+    zIndex: 999,
     ...Shadows.md,
   },
   navItem: {

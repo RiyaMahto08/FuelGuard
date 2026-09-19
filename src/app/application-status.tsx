@@ -66,6 +66,7 @@ export default function VerificationStatusScreen() {
       />
 
       <ScrollView
+        style={{ flex: 1 }}
         contentContainerStyle={styles.scrollContainer}
         showsVerticalScrollIndicator={false}
       >
@@ -231,12 +232,14 @@ export default function VerificationStatusScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    height: '100%',
     backgroundColor: '#F8FAFC',
+    overflow: 'hidden',
   },
   scrollContainer: {
     paddingHorizontal: Spacing.lg,
     paddingTop: Spacing.md,
-    paddingBottom: 40,
+    paddingBottom: 90,
   },
   summaryCard: {
     marginBottom: Spacing.md,
